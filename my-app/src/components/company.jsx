@@ -1,8 +1,5 @@
 import React,{useState} from "react";
 
-import GroceryInput from "./CreateJob";
-
-import GroceryList from "./JobList"
 
 import {nanoid} from "nanoid"
 import CreateJob from "./CreateJob";
@@ -28,18 +25,7 @@ const CompanyJob = ()=>{
         const newList = list.filter((item) => item.id !== data);
         console.log(newList);
         setList(newList)
-        // return(
-        //     <div>
-        //         <h1>{data}</h1>
-        //         <form action="">
-        //             <input type="text" placeholder="Enter Your Name" />
-        //             <br />
-        //             <input type="text" placeholder="Enter Email Address" />
-        //             <br />
-        //             <input type="number" placeholder="Enter Mobile Number" />
-        //         </form>
-        //     </div>
-        // )
+        
     }
    return (
        <div>
@@ -56,7 +42,15 @@ const CompanyJob = ()=>{
 
 
 function ApplyJob(){
+
+    const [data, setData] = useState({})
+
+    const getData = ()=>{
+        data = {...data}
+    }
     return (
+
+        
         <div>
            <form action="">
            <input type="text" placeholder="Enter Your Name" />
