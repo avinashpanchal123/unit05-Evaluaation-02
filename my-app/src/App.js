@@ -1,9 +1,16 @@
-import Company from "./components/company"
+import {CompanyJob, ApplyJob} from "./components/company"
+
+import "./App.css"
 
 function App() {
   return (
-    <div>
-      <Company/>
+    <div className="mainDiv">
+     <div>|
+     <CompanyJob/>
+     </div>
+      <div>
+      <ApplyJob/>
+      </div>
     </div>
   );
 }
